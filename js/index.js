@@ -1,4 +1,10 @@
-//-----------NAV EVENTS---------------
+//-----------NAV---------------
+
+const navBar = document.querySelector('header');
+
+window.addEventListener('resize', () => {
+    navBar.style.background = "#FFD700";
+})
 
 const navLinks = document.querySelectorAll('.nav-link');
 
@@ -20,35 +26,51 @@ navLinks.forEach(item => {
     })
 });
 
-// const logo = document.querySelector('.logo-heading');
+const logo = document.querySelector('.logo-heading');
 
-// logo.addEventListener('click', e => {
-//     e.style.transform = "rotate(360)";
-//     e.style.transition = "transform 1.0s";
-// })
+logo.addEventListener('dblclick', e => {
+    logo.style.display = "none"
+});
 
-//---------------TOP IMG------------------
+window.addEventListener('keydown', () =>{
+    logo.style.color = "red";
+});
+
+window.addEventListener('keyup', () =>{
+    logo.style.color = "#212529";
+});
+
+//---------------IMG------------------
 
 const imgs = document.querySelectorAll('img');
 
-imgs[0].addEventListener('keydown', e => {
-    e.style.transform = 'scale(1.5)';
-    e.style.transition = 'transform 0.8s';
+imgs[0].addEventListener('click', () => {
+    imgs[0].style.opacity = "0.7"; 
+});
+
+
+//----------------H2----------------------
+
+const h2s = document.querySelectorAll('h2');
+
+h2s[2].addEventListener('wheel', () => {
+    h2s[2].style.color = "red";
+});
+
+//------------BACKGROUND------------------
+
+const body = document.querySelector('body');
+
+window.addEventListener('resize', () => {
+    body.style.background = "#87CEFA";
 })
 
-console.log(imgs[0]);
+//------------BOTTOM BTN----------------
 
-// header.addEventListener('click', e => {
-//     e.style.transform = "rotate(45)";
-//     e.style.transition = "transform 0.4s";
-// })
+const btns = document.querySelectorAll('.btn');
 
 
-// const h2s = document.querySelectorAll('h2');
 
-// h2s.forEach(item => {
-//     item.addEventListener('dblclick', e => {
-//         e.style.transform = "rotate(180)";
-//         e.style.transition = "transform 1.0s";
-//     })
-// })
+btns[1].addEventListener('click', () => {
+    body.style.fontFamily = "'Dancing Script', cursive";
+})
