@@ -74,3 +74,16 @@ const btns = document.querySelectorAll('.btn');
 btns[1].addEventListener('click', () => {
     body.style.fontFamily = "'Dancing Script', cursive";
 })
+
+//-----------STOP PROP--------------
+
+const contentDestination = document.querySelector('.content-destination');
+
+contentDestination.addEventListener('dblclick', e => {
+    contentDestination.style.color = "purple";
+})
+
+imgs[3].addEventListener('dblclick', e => {
+    imgs[3].style.borderRadius = "25px";
+    e.stopPropagation();
+})
